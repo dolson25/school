@@ -1,0 +1,3 @@
+In_IN an_DT Oct._NNP 19_CD review_NN of_IN ``_`` The_DT Misanthrope_NN ''_'' at_IN Chicago_NNP 's_POS Goodman_NNP Theatre_NNP -LRB-_-LRB- ``_`` Revitalized_VBN Classics_NNS Take_VBP the_DT Stage_NN in_IN Windy_NNP City_NNP ,_, ''_'' Leisure_NN &_CC Arts_NNS -RRB-_-RRB- ,_, the_DT role_NN of_IN Celimene_NNP ,_, played_VBN by_IN Kim_NNP Cattrall_NNP ,_, was_VBD mistakenly_RB attributed_VBN to_TO Christina_NNP Haag_NNP ._.
+Ms._NNP Haag_NNP plays_VBZ Elianti_NNP ._.
+Rolls-Royce_NNP Motor_NNP Cars_NNPS Inc._NNP said_VBD it_PRP expects_VBZ its_PRP$ U.S._NNP sales_NNS to_TO remain_VB steady_JJ at_IN about_IN 1,200_CD cars_NNS in_IN 1990_CD 

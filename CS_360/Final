@@ -1,0 +1,31 @@
+midterm 2  # 2
+how to circumvent proxy
+it looks for a certain port
+	use a different port
+	not a good way
+connect to an off campus machine
+	vpn, encrypted session
+	uses different port
+	proxy can't establish an ecrypted session
+	can't pretend it's amazon
+	isp is forced to either block the encrypted session or let you through
+
+Edge-triggererd interupts(number 4)
+why important to non-block
+	all the rest of the sockets can't get through, just paying attention to one
+if edge-triggered, what change
+	level-trigger at level, (when it's high enough)
+		interupted as long as there is anything
+		if you get some stuff in interupts next time
+	edge-triggered
+		make sure to read all bytes (get the buffer back to zero)
+		only interupts when it goes from zero to something
+
+latency-ping, how long it takes (network traffic)
+bandwidth(speed of each theoretil connection)
+
+web-cache
+	straight from cache-more bandwidth less latency
+	out there
+		bottleneck is company-internet
+		less people using that speeds it up
