@@ -1,0 +1,49 @@
+
+% 
+% 1. Title: Box Office
+% 
+% 2. Source Information
+%    -- Creators: David Olson,
+%    -- Date: March 2016
+% 
+% 3. Number of Instances: 1 
+% 
+% 4. Number of Attributes: 8
+% 
+% 7. Attribute Information:
+%    1.  production budget 
+%        [0...]
+%    2   runtime in minutes 
+%        [0....]
+%    3   distributor
+%        []
+%    4   genre
+%        []
+%    5   rating 
+%        ['NR','G','PG','PG13','R']
+%    6   # of theaters in "widest release"
+%                  1: [0 100]       2: [101 500]      3: [501 1000]    4: [1001 2000]   5: [2001 3000] 
+                   6: [3001 3500]   7: [3501 4000]    8: [4001 4500]   9: [4501 5000]   10: [5000+
+%    7   release month
+%                  1: [january]   2: [february]  3: [march] ...
+%    8   highest gross pay (usually worldwide)
+%        [0...]
+% 
+% 8. Missing Attribute Values: At most two per movie, usually won't be more than one
+% 
+% 
+% 
+@relation 'box-office'
+@attribute 'budget' real
+@attribute 'runtime' real
+@attribute 'distributor' {'buena_vista'}
+@attribute 'genre' {'action', 'comedy', 'animation'}
+@attribute 'rating' {'NR','G','PG','PG13','R'}
+@attribute 'theaters' {'1','2','3','4','5','6','7','8','9','10'}
+@attribute 'release' {'1','2','3','4','5','6','7','8','9','10','11','12'}
+@attribute 'gross' real
+
+
+@data
+165000000,108,'buena_vista','animation,'PG',3773,11,657818612
+

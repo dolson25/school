@@ -1,0 +1,68 @@
+Assignment: Basic Racket
+Name: David Olson
+
+Instructions: 
+* Open this file in Racket (or your favorite plain-text editor) and add your answers 
+  at the end of each line for each question. If you want to add more explanation or 
+  justification, you may add one or more lines under the question.  Remember to add 
+  your name as well.  Once complete, submit this to Learning Suite as a plain text file.
+* For each of the documentation questions, indicate Yes (Y) or No (N).
+* For each of the test case questions, indicate the line number of the corresponding
+  test (or tests) using "L" and the number of the line.  For example, a test on
+  line 61 of the file would be "L61".  If you don't have a particular test, put "N".
+
+Function: sum-coins
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there a pennies case test? 7
+* Is there a nickles case test? 8
+* Is there a dimes case test? 9
+* Is there a quarters case test? 10
+* Is there a combined case test? 11
+
+Function: area-cylinder
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there at least one test? 19
+* Is there a second test to show generalization? 20
+
+Function: tax
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there at least one test? 33
+* Is there a second test to show generalization? 35
+
+Function: netpay
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there at least one test? 46
+* Is there a second test to show generalization? 47
+
+Function: what-kind
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there a degenerate case test? 61 
+* Is there a two case test? 64
+* Is there an one case test? 62
+* Is there a none case test? 63
+
+Function: time-diff
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there at least one test? 86
+* Is there a second test to show generalization? 89
+
+Function: area
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there a circ case test? 121
+* Is there a square case test? 122
+* Is there a rect case test? 123
+
+Function: translate-shape
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there a circ case test? 168
+* Is there a square case test? 169
+* Is there a rect case test? 170
+
+Function: in-shape
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there a circ (inside) case test? 198
+* Is there a square (inside) case test? 199
+* Is there a rect (inside) case test? 200
+* Is there a circ (outside) case test? 201
+* Is there a square (outside) case test? 202
+* Is there a rect (outside) case test? 203

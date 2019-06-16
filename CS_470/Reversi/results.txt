@@ -1,0 +1,60 @@
+Medium 2
+Me Go First(Black):
+Game 1  lost
+Game 2  won(? timeout)
+GAme 3
+Game 4
+Game 5
+
+Them Go First(White):
+Game 1 Tie
+Game 2
+GAme 3
+Game 4
+Game 5
+
+Medium 1
+Me Go First(Black):
+Game 1 lost
+Game 2
+GAme 3
+Game 4
+Game 5
+
+Them Go First(White):
+Game 1 lost 
+Game 2
+GAme 3
+Game 4
+Game 5
+
+Easy
+Me Go First(Black):
+Game 1 Lost
+Game 2
+GAme 3
+Game 4
+Game 5
+
+Them Go First(White):
+Game 1 Lost
+Game 2
+GAme 3
+Game 4
+Game 5
+
+Soft
+Me Go First(Black):
+Game 1 Lost
+Game 2
+GAme 3
+Game 4
+Game 5
+
+Them Go First(White):
+Game 1  Lost
+Game 2
+GAme 3
+Game 4
+Game 5
+

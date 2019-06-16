@@ -1,0 +1,97 @@
+Assignment: Higher-Order Functions
+Name: David Olson
+
+Instructions: 
+* Open this file in DrRacket (or your favorite plain-text editor) and add your answers 
+  at the end of each line for each question. If you want to add more explanation or 
+  justification, you may add one or more lines under the question.  Remember to add 
+  your name as well.  Once complete, submit this to Learning Suite as a plain text file.
+* For each of the correctness questions, indicate Yes (Y) or No (N).
+* For each of the documentation questions, indicate Yes (Y) or No (N).
+* For each of the test case questions, indicate the line number of the corresponding
+  test (or tests) using "L" and the number of the line.  For example, a test on
+  line 61 of the file would be "L61".  If you don't have a particular test, put "N".
+
+Function: check-temps1
+* Is the function correct? Y
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there an empty case test? 6
+* Is there a cons (first) case test? 7
+* Is there a cons (second) case test? 8
+
+Function: check-temps
+* Is the function correct? Y
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there an empty case test? 21
+* Is there a cons (first) case test? 22
+* Is there a cons (second) case test? 23
+
+Function: convert
+* Is the function correct? Y
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there an empty case test? 35
+* Is there a cons (first) case test? 36
+* Is there a cons (second) case test? 37
+
+Function: average-price
+* Is the function correct? Y
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there an empty case test? 65
+* Is there a cons (first) case test? 66
+* Is there a cons (second) case test? 67
+
+Function: convertFC
+* Is the function correct? Y
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there an empty case test? 76
+* Is there a cons (first) case test? 77
+* Is there a cons (second) case test? 78
+
+Function: eliminate-exp
+* Is the function correct? Y
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there an empty case test? 90
+* Is there a cons (first) case test? 91
+* Is there a cons (second) case test? 92
+
+Function: compose-func
+* Is the function correct? Y
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there at least one test? 109
+* Is there a second test to show generalization? 111
+
+Function: flatten
+* Is the function correct? Y
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there an empty case test? 125/126
+* Is there a cons (first) case test? 127
+* Is there a cons (second) case test? 128
+
+Function: flatten-foldr
+* Is the function correct? Y
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there an empty case test? 138/139
+* Is there a cons (first) case test? 140
+* Is there a cons (second) case test? 141
+
+Function: bucket
+* Is the function correct? Y
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there an empty case test? 156
+* Is there a cons (combines) case test? 157,160
+* Is there a cons (doesn't combine, empty) case test? 162
+* Is there a cons (doesn't combine, cons) case test? 163
+
+Function: tree-map
+* Is the function correct? Y
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there an unknown case test? 231
+* Is there a person (first) case test? 232
+* Is there a person (second) case test? 233
+
+Function: add-last-name
+* Is the function correct? Y
+* Is the function documented correctly (i.e. contract and purpose statement)? Y
+* Is there an unknown case test? 247
+* Is there a person (first) case test? 248
+* Is there a person (second) case test? 249

@@ -1,0 +1,4 @@
+client.communication
+server.database.DAO
+shared.communication
+shared.model

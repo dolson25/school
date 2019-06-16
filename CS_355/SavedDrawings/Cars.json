@@ -1,0 +1,115 @@
+[
+  {
+    "size": 94.0,
+    "point1": {
+      "x": 40.0,
+      "y": 131.0
+    },
+    "color": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "center": {
+      "x": 87.0,
+      "y": 178.0
+    },
+    "rotation": 0.0,
+    "selected": false,
+    "handle": {
+      "size": 10.0,
+      "point1": {
+        "x": 87.0,
+        "y": 121.0
+      },
+      "color": {
+        "value": -65536,
+        "falpha": 0.0
+      },
+      "center": {
+        "x": 87.0,
+        "y": 121.0
+      },
+      "rotation": 0.0,
+      "selected": false,
+      "handles": []
+    },
+    "handles": [
+      {
+        "size": 10.0,
+        "point1": {
+          "x": 87.0,
+          "y": 121.0
+        },
+        "color": {
+          "value": -65536,
+          "falpha": 0.0
+        },
+        "center": {
+          "x": 87.0,
+          "y": 121.0
+        },
+        "rotation": 0.0,
+        "selected": false,
+        "handles": []
+      }
+    ],
+    "SHAPE_TYPE": "cs355.model.drawing.Square"
+  },
+  {
+    "width": 243.0,
+    "height": 95.0,
+    "point1": {
+      "x": 89.0,
+      "y": 292.0
+    },
+    "color": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "center": {
+      "x": 210.5,
+      "y": 339.5
+    },
+    "rotation": 0.0,
+    "selected": false,
+    "handle": {
+      "size": 10.0,
+      "point1": {
+        "x": 210.5,
+        "y": 282.0
+      },
+      "color": {
+        "value": -65536,
+        "falpha": 0.0
+      },
+      "center": {
+        "x": 210.5,
+        "y": 282.0
+      },
+      "rotation": 0.0,
+      "selected": false,
+      "handles": []
+    },
+    "handles": [
+      {
+        "size": 10.0,
+        "point1": {
+          "x": 210.5,
+          "y": 282.0
+        },
+        "color": {
+          "value": -65536,
+          "falpha": 0.0
+        },
+        "center": {
+          "x": 210.5,
+          "y": 282.0
+        },
+        "rotation": 0.0,
+        "selected": false,
+        "handles": []
+      }
+    ],
+    "SHAPE_TYPE": "cs355.model.drawing.Ellipse"
+  }
+]

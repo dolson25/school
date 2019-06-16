@@ -1,0 +1,232 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname lists_and_trees) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+;check-temps1? : list(number) -> boolean
+;given a list a temperatures, return true if all are in the range [5,95]
+(define (check-temps1 temps)
+  (cond
+    [(empty? temps) #t]
+    [else (and (>= (first temps) 5) (<= (first temps) 95)
+               (check-temps1 (rest temps)))]))
+
+(check-expect (check-temps1 '()) #t)
+(check-expect (check-temps1 (list 5)) #t)
+(check-expect (check-temps1 (list 4 96)) #f)
+(check-expect (check-temps1 (list -1 0 100)) #f)
+(check-expect (check-temps1 (list 5 95)) #t)
+(check-expect (check-temps1 (list 6 34 88)) #t)
+
+
+
+;check-temps? : list(number), number, number -> boolean
+;given a list a temperatures and a low and high temp,
+;          return true if all are in the range [low,high]
+(define (check-temps temps low high)
+  (cond
+    [(empty? temps) #t]
+    [else (and (>= (first temps) low) (<= (first temps) high)
+               (check-temps (rest temps) low high))]))
+
+(check-expect (check-temps '() 5 95) #t)
+(check-expect (check-temps (list 4) 5 95) #f)
+(check-expect (check-temps (list 4 96) 5 95) #f)
+(check-expect (check-temps (list -1 0 100) 5 95) #f)
+(check-expect (check-temps (list 5 95) 5 95) #t)
+(check-expect (check-temps (list 6 34 88) 5 95) #t)
+
+
+
+;convert? : list(number) -> number
+;The list is the ones digit, tens.... return the represented number
+(define (convert digits)
+  (cond
+    [(empty? digits) 0]
+    [else (+ (first digits) (* 10 (convert (rest digits))))]))
+
+(check-expect (convert '()) 0)
+(check-expect (convert (list 2)) 2)
+(check-expect (convert (list 1 2)) 21)
+(check-expect (convert (list 1 2 3)) 321)
+(check-expect (convert (list 0 0 0)) 0)
+(check-expect (convert (list 0 2 3)) 320)
+(check-expect (convert (list 1 2 0)) 21)
+(check-expect (convert (list 5 2 3 3 7)) 73325)
+
+
+
+;average-price? : list(number) -> number
+;given a list of prices (of toys) return the average price
+(define (average-price prices)
+  (cond
+     [(empty? prices) "no toys"]
+     [else (/ (sum prices) (count prices))]))
+
+
+;sum? : list(number) -> number
+;helper function for average-price, adds up all toy prices
+(define (sum prices)
+  (cond
+     [(empty? prices) 0]
+     [else (+ (first prices) (sum (rest prices)))]))
+
+
+;count? : list(number) -> number
+;helper function for average-price, returns a toy count
+(define (count prices)
+  (cond
+     [(empty? prices) 0]
+     [else (+ 1 (count (rest prices)))]))
+
+(check-expect (average-price '()) "no toys")
+(check-expect (average-price (list 4)) 4)
+(check-expect (average-price (list 13 16)) 14.5)
+
+
+
+;convertFC? : list(number) -> list(number)
+;Converts a list of Fahrenheit measurements to a list of Celsius measurments
+(define (convertFC fahrenheit)
+  (cond
+    [(empty? fahrenheit) '()]
+    [else (cons (* (- (first fahrenheit) 32) (/ 5 9))
+              (convertFC (rest fahrenheit)))]))
+
+(check-expect (convertFC '()) '())
+(check-expect (convertFC (list 500)) (list 260))
+(check-expect (convertFC (list 500 212)) (list 260 100))
+(check-expect (convertFC (list -40 32 212)) (list -40 0 100))
+(check-within (first (convertFC (list -3))) -19.4 .1)
+
+
+
+;eliminate-exp? : number, list(number) -> list(number)
+;creates a new list from an old, with all numbers greater than a
+;          certain threshold eliminated
+(define (eliminate-exp ua lotp)
+  (cond
+    [(empty? lotp) '()]
+    [else (if (<= (first lotp) ua)
+              (cons (first lotp) (eliminate-exp ua (rest lotp)))
+              (eliminate-exp ua (rest lotp)))]))
+
+(check-expect (eliminate-exp 75 '()) '())
+(check-expect (eliminate-exp 75 (list 76)) '())
+(check-expect (eliminate-exp 75 (list 76 100)) '())
+(check-expect (eliminate-exp 50 (list 50 20)) (list 50 20))
+(check-expect (eliminate-exp 100 (list 76 100 2 212 300)) ( list 76 100 2))
+
+
+
+;suffixes? : list -> list(list)
+;takes a list and produces a list of every suffix of that list
+(define (suffixes l)
+  (cond
+    [(empty? l) (cons '() '())]
+    [else (cons l (suffixes (rest l)))]))
+
+(check-expect (suffixes '()) (list '()))
+(check-expect (suffixes (list 'a)) (list (list 'a) '()))
+(check-expect (suffixes (list 'a 'b)) (list (list 'a 'b) (list 'b) '()))
+
+
+
+
+;struct-unknown :
+;an unknown ancestor
+(define-struct unknown [])
+
+;struct-person : string, number, symbol, (unknown or person), (unknown or person) 
+;represents a person
+(define-struct person [name birthyear eyecolor father mother])
+
+
+
+;count-persons? : tree(unknown or person) -> number
+;given a family tree using list of lists, return number of total known people
+(define (count-persons ftree)
+  (cond
+    [(empty? ftree) 0]
+    [(unknown? (first ftree)) (+(count-persons (second ftree))
+                                (count-persons (third ftree)))]
+    [else (+ 1 (count-persons (second ftree))
+                               (count-persons (third ftree)))]))
+
+
+;make some people for the tests
+(define somePerson (make-unknown)) 
+(define gp1 (make-person "grandpa1" 1940 'gr somePerson somePerson))
+(define gm1 (make-person "grandma1" 1940 'bl somePerson somePerson))
+(define gp2 (make-person "grandpa2" 1940 'bl somePerson somePerson))
+(define gm2 (make-person "grandma2" 1940 'red somePerson somePerson))
+(define dad (make-person "dad" 1970 'br gp1 gm1))
+(define mom (make-person "mom" 1970 'gr gp2 gm2))
+(define david (make-person "david" 2000 'bl dad mom))
+
+
+(check-expect (count-persons (list somePerson '() '())) 0)
+(check-expect (count-persons (list david '() '())) 1)
+(check-expect (count-persons (list david '() (list mom '() '()))) 2)
+(check-expect (count-persons (list david 
+      (list dad (list gp1 '() '()) (list gm1 '() '()))
+      (list mom (list gp2 '() '()) (list gm2 '() '())))) 7)
+(check-expect (count-persons (list somePerson (list mom '() '())
+                                              (list dad '() '()))) 2)
+
+  
+;average-age? : tree(unknown or person) -> number
+;returns the average age of all people in the tree (age is 2016 - birthyear)
+(define (average-age ftree)
+  (cond
+    [(unknown? (first ftree)) "root is an unknown person"]
+    [else (/ (sum-ages ftree) (count-persons ftree))]))
+
+;sum-ages? : tree(unkown or person -> number
+;helper function for average-age, returns the sum of all known ages
+(define (sum-ages ftree)
+    (cond
+    [(empty? ftree) 0]
+    [(unknown? (first ftree)) (+(sum-ages (second ftree))
+                                (sum-ages (third ftree)))]
+    [else (+ (- 2016 (person-birthyear (first ftree))) 
+             (sum-ages (second ftree))
+             (sum-ages (third ftree)))]))
+
+
+(check-expect (average-age (list somePerson '() '()))
+                                  "root is an unknown person")
+(check-expect (average-age (list david
+                                 (list somePerson '() '())
+                                 (list somePerson '() '()))) 16)
+(check-expect (average-age (list david '() (list mom '() '()))) 31)
+(check-within (average-age (list david 
+      (list dad (list gp1 '() '()) (list gm1 '() '()))
+      (list mom (list gp2 '() '()) (list gm2 '() '())))) 58.8 .1)
+
+
+
+
+;eye-colors? : tree(unknown or person) -> list(symbol)
+;returns a list of all eye colors in tree, including duplicates
+(define (eye-colors ftree)
+    (cond
+    [(empty? ftree) '()]
+    [(unknown? (first ftree)) (append '() (eye-colors (second ftree))
+                                (eye-colors (third ftree)))]
+    [else (append (list (person-eyecolor (first ftree))) 
+             (eye-colors (second ftree))
+             (eye-colors (third ftree)))]))
+
+(check-expect (eye-colors '()) '())
+(check-expect (eye-colors (list somePerson '() '())) '())
+(check-expect (eye-colors (list david
+                                 (list somePerson '() '())
+                                 (list somePerson '() '()))) (list 'bl))
+(check-expect (eye-colors (list david '() '())) (list 'bl))
+(check-expect (eye-colors (list david '() (list mom '() '())))
+                                                    (list 'bl 'gr))
+(check-expect (eye-colors (list david 
+      (list dad (list gp1 '() '()) (list gm1 '() '()))
+      (list mom (list gp2 '() '()) (list gm2 '() '()))))
+              (list 'bl 'br 'gr 'bl 'gr 'bl 'red))
+
+

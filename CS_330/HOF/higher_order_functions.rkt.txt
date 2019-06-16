@@ -1,0 +1,256 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-intermediate-lambda-reader.ss" "lang")((modname higher_order_functions) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+;check-temps1? : list(number) -> boolean
+;given a list a temperatures, return true if all are in the range [5,95]
+(define (check-temps1 temps)
+    (foldr (lambda (x y) (and (>=  x 5) (<= x 95) y)) #t temps))
+
+(check-expect (check-temps1 '()) #t)
+(check-expect (check-temps1 (list 5)) #t)
+(check-expect (check-temps1 (list 4 96)) #f)
+(check-expect (check-temps1 (list -1 0 100)) #f)
+(check-expect (check-temps1 (list 5 95)) #t)
+(check-expect (check-temps1 (list 6 34 88)) #t)
+
+
+
+;check-temps? : list(number), number, number -> boolean
+;given a list a temperatures and a low and high temp,
+;          return true if all are in the range [low,high]
+(define (check-temps temps low high)
+  (foldr (lambda (x y) (and (>=  x low) (<= x high) y)) #t temps))
+
+(check-expect (check-temps '() 5 95) #t)
+(check-expect (check-temps (list 4) 5 95) #f)
+(check-expect (check-temps (list 4 96) 5 95) #f)
+(check-expect (check-temps (list -1 0 100) 5 95) #f)
+(check-expect (check-temps (list 5 95) 5 95) #t)
+(check-expect (check-temps (list 6 34 88) 5 95) #t)
+
+
+
+;convert? : list(number) -> number
+;The list is the ones digit, tens.... return the represented number
+(define (convert digits)
+  (foldr (lambda (x y) (+ x (* 10 y))) 0 digits))
+
+(check-expect (convert '()) 0)
+(check-expect (convert (list 2)) 2)
+(check-expect (convert (list 1 2)) 21)
+(check-expect (convert (list 1 2 3)) 321)
+(check-expect (convert (list 0 0 0)) 0)
+(check-expect (convert (list 0 2 3)) 320)
+(check-expect (convert (list 1 2 0)) 21)
+(check-expect (convert (list 5 2 3 3 7)) 73325)
+
+
+
+;average-price? : list(number) -> number
+;given a list of prices (of toys) return the average price
+(define (average-price prices)
+  (cond
+     [(empty? prices) "no toys"]
+     [else (/ (sum prices) (count prices))]))
+
+
+;sum? : list(number) -> number
+;helper function for average-price, adds up all toy prices
+(define (sum prices)
+  (foldr + 0 prices))
+
+
+;count? : list(number) -> number
+;helper function for average-price, returns a toy count
+(define (count prices)
+   (foldr (lambda (x y) (+ 1 y)) 0 prices))
+
+(check-expect (average-price '()) "no toys")
+(check-expect (average-price (list 4)) 4)
+(check-expect (average-price (list 13 16)) 14.5)
+
+
+
+;convertFC? : list(number) -> list(number)
+;Converts a list of Fahrenheit measurements to a list of Celsius measurments
+(define (convertFC fahrenheit)
+    (map (lambda (x) (* (- x 32) (/ 5 9))) fahrenheit))
+
+(check-expect (convertFC '()) '())
+(check-expect (convertFC (list 500)) (list 260))
+(check-expect (convertFC (list 500 212)) (list 260 100))
+(check-expect (convertFC (list -40 32 212)) (list -40 0 100))
+(check-within (first (convertFC (list -3))) -19.4 .1)
+
+
+
+;eliminate-exp? : number, list(number) -> list(number)
+;creates a new list from an old, with all numbers greater than a
+;          certain threshold eliminated
+(define (eliminate-exp ua lotp)
+   (filter (lambda (x) (<= x ua)) lotp))
+
+(check-expect (eliminate-exp 75 '()) '())
+(check-expect (eliminate-exp 75 (list 76)) '())
+(check-expect (eliminate-exp 75 (list 76 100)) '())
+(check-expect (eliminate-exp 50 (list 50 20)) (list 50 20))
+(check-expect (eliminate-exp 100 (list 76 100 2 212 300)) ( list 76 100 2))
+
+
+
+;compose-func? : function1, function2, function3
+;returns a function that is function2, then function 1 in succession
+(define (compose-func after before)
+    (lambda (x) (after (before x))))
+
+;make some functions to test compose
+(define (plus1 x) (+ 1 x))
+(define (double x) (* 2 x))
+(define (triple x) (* 3 x))
+(define (minus1 x) (- x 1))
+
+(check-expect ((compose-func plus1 double) 3) 7)
+(check-expect ((compose-func double plus1) 3) 8)
+(check-expect ((compose-func minus1 triple) 3) 8)
+(check-expect ((compose-func triple minus1) 3) 6)
+
+
+
+;flatten? : list(list(number)) -> list(number)
+;put all the numbers in the innter lists into one big list
+(define (flatten lolon)
+  (cond
+    [(empty? lolon) '()]
+    [else (append (first lolon) (flatten (rest lolon)))]))
+
+(check-expect (flatten (list (list 1 2) (list 3 4 5) (list 6)))
+                                                (list 1 2 3 4 5 6))
+(check-expect (flatten '()) '())
+(check-expect (flatten (list '())) '())
+(check-expect (flatten (list (list 2))) (list 2))
+(check-expect (flatten (list (list 2) '() (list 4 5))) (list 2 4 5))
+
+
+;flatten-foldr? : list(list(number)) -> list(number)
+;put all the numbers in the innter lists into one big list
+(define (flatten-foldr lolon)
+   (foldr (lambda (x y) (append x y)) '() lolon))
+
+(check-expect (flatten-foldr (list (list 1 2) (list 3 4 5) (list 6)))
+                                                (list 1 2 3 4 5 6))
+(check-expect (flatten-foldr '()) '())
+(check-expect (flatten-foldr (list '())) '())
+(check-expect (flatten-foldr (list (list 2))) (list 2))
+(check-expect (flatten-foldr (list (list 2) '() (list 4 5))) (list 2 4 5))
+
+
+
+;bucket? : list(number) -> list(list(number))
+;Returns a list of sublists of adjacent equal numbers.
+(define (bucket lon)
+    (foldr
+           (lambda (x y) (cond
+                           [(empty? (first y)) (list (list x))]
+                           [(= x (first (first y))) (cons
+                                 (cons  x (first y)) (rest y))]
+                           [else (cons (list x) y)]))
+            (list '()) lon))
+
+(check-expect (bucket '()) (list '()))
+(check-expect (bucket (list 1 1 2 2 2 3 1 1 1 2 3 3))
+              (list (list 1 1) (list 2 2 2) (list 3)
+                    (list 1 1 1) (list 2) (list 3 3)))
+(check-expect (bucket (list 4 5 7 7 7 7 7 7))
+              (list (list 4) (list 5) (list 7 7 7 7 7 7)))
+(check-expect (bucket (list 2)) (list (list 2)))
+(check-expect (bucket (list 2 3 4)) (list (list 2) (list 3) (list 4)))
+
+
+
+
+
+
+;struct-unknown :
+;an unknown ancestor
+(define-struct unknown [])
+
+;struct-person : string, number, symbol, (unknown or person), (unknown or person) 
+;represents a person
+(define-struct person [name birthyear eyecolor father mother])
+
+
+;make some people for the tests
+(define somePerson (make-unknown)) 
+(define gp1 (make-person "grandpa1" 1940 'gr somePerson somePerson))
+(define gm1 (make-person "grandma1" 1940 'bl somePerson somePerson))
+(define gp2 (make-person "grandpa2" 1940 'bl somePerson somePerson))
+(define gm2 (make-person "grandma2" 1940 'red somePerson somePerson))
+(define dad (make-person "dad" 1970 'br gp1 gm1))
+(define mom (make-person "mom" 1970 'gr gp2 gm2))
+(define david (make-person "david" 2000 'bl dad mom))
+
+(define gp1-cool (make-person "grandpa1 cool" 1940 'gr somePerson somePerson))
+(define gm1-cool (make-person "grandma1 cool" 1940 'bl somePerson somePerson))
+(define gp2-cool (make-person "grandpa2 cool" 1940 'bl somePerson somePerson))
+(define gm2-cool (make-person "grandma2 cool" 1940 'red somePerson somePerson))
+(define dad-cool (make-person "dad cool" 1970 'br gp1 gm1))
+(define mom-cool (make-person "mom cool" 1970 'gr gp2 gm2))
+(define david-cool (make-person "david cool" 2000 'bl dad mom))
+
+(define gp1-jones (make-person "grandpa1 jones" 1940 'gr somePerson somePerson))
+(define gm1-jones (make-person "grandma1 jones" 1940 'bl somePerson somePerson))
+(define gp2-jones (make-person "grandpa2 jones" 1940 'bl somePerson somePerson))
+(define gm2-jones (make-person "grandma2 jones" 1940 'red somePerson somePerson))
+(define dad-jones (make-person "dad jones" 1970 'br gp1 gm1))
+(define mom-jones (make-person "mom jones" 1970 'gr gp2 gm2))
+(define david-jones (make-person "david jones" 2000 'bl dad mom))
+
+;a string function for test
+(define (string-append-cool str)
+  (string-append str " " "cool"))
+
+
+
+;tree-map? : function?(string -> string), tree(unknown/person)
+;applies the string function to every person's name in the tree,
+             ;returns the new tree
+(define (tree-map f tree)
+  (map (lambda (x)
+     (cond
+        [(list? x) (cond
+                     [(empty? x) x]
+                     [else (tree-map f x)])]
+        [else (cond
+                [(unknown? x) x]
+                [else  (make-person
+                          (f (person-name x))
+                          (person-birthyear x)
+                          (person-eyecolor x)
+                          (person-father x) 
+                          (person-mother x))])])) tree))
+
+(check-expect (tree-map string-append-cool '()) '())
+(check-expect (tree-map string-append-cool (list '())) (list '()))
+(check-expect (tree-map string-append-cool (list somePerson)) (list somePerson))
+(check-expect (tree-map string-append-cool (list david)) (list david-cool))
+(check-expect (tree-map string-append-cool (list david (list mom dad)))
+              (list david-cool (list mom-cool dad-cool)))
+
+
+
+
+
+;add-last-name? : tree(unknown/person), string -> tree(unknown/person)
+;Returns a tree where lname has been appended to every person’s name in tree.
+(define (add-last-name tree lname)
+  (tree-map (lambda (x) (string-append x " " lname)) tree))
+
+(check-expect (add-last-name '() "jones") '())
+(check-expect (add-last-name (list '()) "jones") (list '()))
+(check-expect (add-last-name (list somePerson) "jones") (list somePerson))
+(check-expect (add-last-name (list david) "jones") (list david-jones))
+(check-expect (add-last-name (list david (list mom dad)) "jones")
+              (list david-jones (list mom-jones dad-jones)))
+
+                                  
+                    

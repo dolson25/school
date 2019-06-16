@@ -1,0 +1,112 @@
+<html>
+    
+<style>
+    #gameArea {
+        border: 2px solid black;
+    }
+</style>
+    
+<script>
+  var context;
+  var enemies = [];
+  var vectors = [-1,-.5,.5,1];
+
+    for(var i=0; i<5; i++)
+    {
+      var startingX = Math.floor(Math.random() * (580 - 125 + 1)) + 100;
+      var startingY = Math.floor(Math.random() * (175 - 0 + 1)) + 0;
+      var startingDX = vectors[Math.floor(Math.random() * 4)]
+      var startingDY = vectors[Math.floor(Math.random() * 4)]
+      var enemy = {x:startingX, y:startingY, dx:startingDX, dy:startingDY};
+      enemies.push(enemy);    
+    }
+    
+    var guyX = 0;
+    var guyY = 280;
+    var guyDX = 5;
+    var guyDY = 5;
+  
+  document.onkeydown = move;
+
+function move(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '38') {
+        // up arrow
+        if(guyY>0)
+            guyY -= guyDY;
+    }
+    if (e.keyCode == '40') {
+        // down arrow
+        if(guyY<280)
+            guyY += guyDY;
+    }
+    if (e.keyCode == '37') {
+       // left arrow
+       if(guyX>0)
+            guyX -= guyDX;
+    }
+    if (e.keyCode == '39') {
+       // right arrow
+       if(guyX<580)
+            guyX += guyDX;
+    }
+    
+    if(guyX===580 && guyY===0)
+        location.reload();
+
+}
+  
+  function init()
+  {
+    context= gameArea.getContext('2d');
+    setInterval(draw,10);
+  }
+  
+  function draw()
+  {
+    context.clearRect(0,0, 600,300);
+    context.fillStyle='#ffff00';
+    context.fillRect(580,0,20,20);
+    drawEnemies();
+    drawGuy(checkDeath());  
+  }
+  
+  function drawEnemies()
+  {
+    context.fillStyle="#0000ff";
+    for(var i=0; i<enemies.length; i++)
+    {
+        e = enemies[i];
+        
+        context.fillRect(e.x,e.y,20,20);
+        if( e.x<0 || e.x>580) e.dx=-e.dx; 
+        if( e.y<0 || e.y>280) e.dy=-e.dy;
+        e.x += e.dx;
+        e.y += e.dy;
+    }
+  }
+  
+  function drawGuy()
+  {
+    context.fillStyle="#000000";
+    context.fillRect(guyX,guyY,20,20);
+  }
+  
+  function checkDeath(){
+    for(var i=0; i<enemies.length; i++)
+    {
+        e = enemies[i];
+      if(e.x > (guyX - 15) && e.x < (guyX + 15) && e.y > (guyY - 15) && e.y < (guyY + 15))
+        location.reload();
+    }
+  }
+  
+</script>   
+    
+<body onload="init()">
+<canvas id="gameArea" width="600" height="300">
+</canvas>
+</body>
+</html>

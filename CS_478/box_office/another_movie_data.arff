@@ -1,0 +1,213 @@
+@relation 'Movie_Data-weka.filters.unsupervised.attribute.Discretize-O-B10-M-1.0-R4,7'
+
+@attribute Genre {'Sci-Fi Fantasy','Drama','Science fiction','Action / Adventure','Action Thriller','Animation','Family Adventure','Period Adventure','Sci-Fi Action','Sci-Fi Horror','Fantasy','Historical Drama','Action','Comedy / Drama','Romance','Horror','Action Adventure','Animation','Comedy','Family Comedy','Sci-Fi Thriller','Horror Thriller','Sci-Fi Adventure`','Sports Drama','Sci-Fi Comedy','Adventure','Action Drama','War','Historical Epic','Action','Sci-Fi Adventure','Period Drama','Thriller','Action Comedy','Crime Drama','Sci-Fi','Fantasy Comedy','Crime Comedy','Action / Crime','War Drama','Western','Unknown','Drama Thriller','Family','Adventure Comedy','Sports Action','Romantic Comedy'}
+@attribute 'Runtime (minutes)' {'(-inf-96.6)','(96.6-110.2)','(110.2-123.8)','(123.8-inf)'}
+@attribute Distributor {'Disney','Fox','Paramount','Universal','Buena Vista','Warner Bros','DreamWorks','Sony','Newmarket','Buena Vista','Sony / Columbia','New Line','Warner Bros.','Summit Entertainment','Lionsgate','Columbia','Orion Pictures','MGM','Lionsgate / Summit','Sony (Revolution)','Miramax','United Artists','TriStar','Clarius Entertainment','Samuel Goldwyn','Weinstein Company','Freestyle Releasing'}
+@attribute 'Rating ' {'PG-13','PG','G','R','PG','NR'}
+@attribute Theaters {'(-inf-445.9)','(445.9-892.8)','(892.8-1339.7)','(1339.7-1786.6)','(1786.6-2233.5)','(2233.5-2680.4)','(2680.4-3127.3)','(3127.3-3574.2)','(3574.2-inf)'}
+@attribute 'Month of Release' real
+@attribute Profitable real
+
+@data
+'Sci-Fi Fantasy','(123.8-inf)','Disney','PG-13','(3574.2-inf)',12,1
+'Sci-Fi Fantasy','(123.8-inf)','Fox','PG-13','(3127.3-3574.2)',12,1
+'Drama','(123.8-inf)','Paramount','PG-13','(3127.3-3574.2)',12,1
+'Science fiction','(123.8-inf)','Universal','PG-13','(3574.2-inf)',6,1
+'Action / Adventure','(123.8-inf)','Buena Vista','PG-13','(3574.2-inf)',5,1
+'Action / Adventure','(123.8-inf)','Warner Bros','PG-13','(3574.2-inf)',7,1
+'Sci-Fi Fantasy','(123.8-inf)','Fox','PG','(2680.4-3127.3)',5,1
+'Sci-Fi Fantasy','(110.2-123.8)','Fox','PG','(1339.7-1786.6)',5,1
+'Action / Adventure','(123.8-inf)','Buena Vista','PG-13','(3574.2-inf)',5,1
+'Action Thriller','(123.8-inf)','Warner Bros','PG-13','(3574.2-inf)',7,1
+'Animation','(-inf-96.6)','DreamWorks','PG','(3574.2-inf)',5,1
+'Family Adventure','(110.2-123.8)','Universal','PG','(892.8-1339.7)',6,1
+'Action / Adventure','(123.8-inf)','Lionsgate','PG-13','(3574.2-inf)',11,1
+'Period Adventure','(123.8-inf)','Buena Vista','PG-13','(3574.2-inf)',7,1
+'Animation','(-inf-96.6)','Buena Vista','G','(2233.5-2680.4)',6,1
+'Animation','(96.6-110.2)','Buena Vista','G','(3574.2-inf)',6,1
+'Action / Adventure','(123.8-inf)','Buena Vista','PG-13','(3574.2-inf)',5,1
+'Action / Adventure','(123.8-inf)','Lionsgate','PG-13','(3574.2-inf)',3,1
+'Action / Adventure','(110.2-123.8)','Sony','PG-13','(3574.2-inf)',5,1
+'Sci-Fi Action','(123.8-inf)','Paramount','PG-13','(3574.2-inf)',6,1
+'Animation','(96.6-110.2)','Buena Vista','PG','(3574.2-inf)',11,1
+'Sci-Fi Horror','(123.8-inf)','Universal','PG-13','(2233.5-2680.4)',6,1
+'Fantasy','(123.8-inf)','Warner Bros.','PG-13','(3574.2-inf)',7,1
+'Animation','(96.6-110.2)','Buena Vista','G','(3127.3-3574.2)',5,1
+'Sci-Fi Fantasy','(123.8-inf)','Fox','PG-13','(3574.2-inf)',5,1
+'Fantasy','(123.8-inf)','New Line','PG-13','(3574.2-inf)',12,1
+'Action / Adventure','(123.8-inf)','Sony','PG-13','(3574.2-inf)',6,1
+'Historical Drama','(123.8-inf)','Newmarket','R','(3127.3-3574.2)',2,1
+'Animation','(96.6-110.2)','Universal','PG','(3574.2-inf)',7,1
+'Animation','(-inf-96.6)','Buena Vista','PG','(3574.2-inf)',6,1
+'Sci-Fi Action','(123.8-inf)','Paramount','PG-13','(3574.2-inf)',6,1
+'Action','(96.6-110.2)','Fox','R','(3574.2-inf)',2,1
+'Action','(123.8-inf)','Universal','PG-13','(3574.2-inf)',4,1
+'Drama','(123.8-inf)','Warner Bros','R','(3574.2-inf)',12,1
+'Fantasy','(123.8-inf)','New Line','PG-13','(3574.2-inf)',12,1
+'Action / Adventure','(110.2-123.8)','Lionsgate','PG-13','(3574.2-inf)',11,1
+'Action / Adventure','(123.8-inf)','Sony','PG-13','(3574.2-inf)',5,1
+'Animation','(-inf-96.6)','Universal','PG','(3574.2-inf)',7,1
+'Family Adventure','(96.6-110.2)','Buena Vista','PG','(3574.2-inf)',3,1
+'Action / Adventure','(110.2-123.8)','Buena Vista','PG-13','(3574.2-inf)',8,1
+'Comedy / Drama','(123.8-inf)','Paramount','PG-13','(2233.5-2680.4)',7,1
+'Animation','(-inf-96.6)','Paramount','PG','(3574.2-inf)',5,1
+'Sci-Fi Action','(123.8-inf)','Paramount','PG-13','(3574.2-inf)',7,1
+'Action / Adventure','(123.8-inf)','Paramount','PG-13','(3574.2-inf)',5,1
+'Fantasy','(123.8-inf)','Warner Bros','PG','(3574.2-inf)',11,1
+'Period Adventure','(110.2-123.8)','Paramount','PG-13','(3574.2-inf)',5,1
+'Fantasy','(123.8-inf)','New Line','PG-13','(3127.3-3574.2)',12,1
+'Action / Adventure','(123.8-inf)','Paramount','PG-13','(3574.2-inf)',5,1
+'Period Adventure','(123.8-inf)','Buena Vista','PG-13','(3574.2-inf)',5,1
+'Sci-Fi Fantasy','(123.8-inf)','Fox','PG','(1339.7-1786.6)',5,1
+'Sci-Fi Action','(123.8-inf)','Fox','PG-13','(2680.4-3127.3)',7,1
+'Period Adventure','(123.8-inf)','Buena Vista','PG-13','(3127.3-3574.2)',7,1
+'Action','(123.8-inf)','Sony / Columbia','PG-13','(3127.3-3574.2)',11,1
+'Fantasy','(123.8-inf)','New Line','PG-13','(3574.2-inf)',12,1
+'Sci-Fi Fantasy','(123.8-inf)','Fox','PG','(3127.3-3574.2)',5,1
+'Fantasy','(123.8-inf)','Warner Bros.','PG','(3574.2-inf)',7,1
+'Romance','(123.8-inf)','Summit Entertainment','PG-13','(3574.2-inf)',6,1
+'Romance','(123.8-inf)','Summit Entertainment','PG-13','(3574.2-inf)',11,1
+'Fantasy','(123.8-inf)','Warner Bros.','PG-13','(3574.2-inf)',11,1
+'Horror','(96.6-110.2)','Buena Vista','PG-13','(2680.4-3127.3)',8,1
+'Animation','(123.8-inf)','Buena Vista','PG','(3574.2-inf)',5,1
+'Sci-Fi Action','(123.8-inf)','Warner Bros.','PG-13','(3574.2-inf)',7,1
+'Romance','(110.2-123.8)','Summit Entertainment','PG-13','(3574.2-inf)',11,1
+'Fantasy','(123.8-inf)','Warner Bros.','PG-13','(3574.2-inf)',7,1
+'Fantasy','(123.8-inf)','Buena Vista','PG','(3574.2-inf)',12,1
+'Action Adventure','(123.8-inf)','Warner Bros.','PG-13','(3574.2-inf)',6,1
+'Sci-Fi Fantasy','(123.8-inf)','Fox','PG','(892.8-1339.7)',5,1
+'Fantasy','(123.8-inf)','Warner Bros.','PG-13','(3574.2-inf)',11,1
+'Animation','(-inf-96.6)','Buena Vista','G','(3574.2-inf)',11,1
+'Action Adventure','(123.8-inf)','Lionsgate','PG-13','(3574.2-inf)',11,1
+'Sci-Fi Action','(123.8-inf)','Warner Bros.','R','(3574.2-inf)',5,1
+'Romance','(96.6-110.2)','Summit Entertainment','PG-13','(3574.2-inf)',11,1
+'Comedy','(110.2-123.8)','Universal','PG-13','(3127.3-3574.2)',12,1
+'Family Comedy','(96.6-110.2)','Fox','PG','(1786.6-2233.5)',11,1
+'Comedy','(-inf-96.6)','Warner Bros.','R','(3127.3-3574.2)',6,1
+'Sci-Fi Thriller','(-inf-96.6)','Warner Bros.','PG-13','(3574.2-inf)',10,1
+'Animation','(96.6-110.2)','Buena Vista','G','(3574.2-inf)',6,1
+'Animation','(-inf-96.6)','DreamWorks','PG','(3574.2-inf)',5,1
+'Action Adventure','(123.8-inf)','Sony / Columbia','PG-13','(3574.2-inf)',7,1
+'Fantasy','(123.8-inf)','Warner Bros.','PG','(3574.2-inf)',11,1
+'Animation','(110.2-123.8)','Buena Vista','PG','(3574.2-inf)',11,1
+'Family Comedy','(96.6-110.2)','Universal','PG','(3127.3-3574.2)',11,1
+'Horror Thriller','(123.8-inf)','Universal','PG','(445.9-892.8)',6,1
+'Action Adventure','(123.8-inf)','Buena Vista','PG-13','(3574.2-inf)',4,1
+'Fantasy','(123.8-inf)','New Line','PG-13','(3574.2-inf)',12,1
+'Animation','(96.6-110.2)','Warner Bros.','PG','(3574.2-inf)',2,1
+'Sci-Fi Adventure`','(123.8-inf)','Paramount','PG-13','(3574.2-inf)',5,1
+'Sci-Fi Horror','(96.6-110.2)','Warner Bros.','PG-13','(3574.2-inf)',12,1
+'Sports Drama','(123.8-inf)','Warner Bros.','PG-13','(3127.3-3574.2)',11,1
+'Fantasy','(123.8-inf)','New Line','PG-13','(3574.2-inf)',12,1
+'Comedy','(96.6-110.2)','Warner Bros.','R','(3574.2-inf)',5,1
+'Animation','(96.6-110.2)','Buena Vista','PG','(3574.2-inf)',3,1
+'Animation','(-inf-96.6)','Universal','PG','(3574.2-inf)',7,1
+'Family Adventure','(96.6-110.2)','Fox','PG','(3574.2-inf)',12,1
+'Sci-Fi Comedy','(96.6-110.2)','Sony / Columbia','PG-13','(3127.3-3574.2)',7,1
+'Fantasy','(123.8-inf)','Warner Bros.','PG','(3574.2-inf)',6,1
+'Action Adventure','(123.8-inf)','Warner Bros.','PG-13','(1786.6-2233.5)',6,1
+'Period Adventure','(110.2-123.8)','Paramount','PG','(892.8-1339.7)',6,1
+'Animation','(-inf-96.6)','Buena Vista','G','(3127.3-3574.2)',11,1
+'Sci-Fi Action','(123.8-inf)','Paramount','PG-13','(3574.2-inf)',6,1
+'Adventure','(96.6-110.2)','Buena Vista','R','(2233.5-2680.4)',8,0
+'Action Drama','(123.8-inf)','Universal','PG-13','(2680.4-3127.3)',12,0
+'Unknown','(123.8-inf)','Columbia','PG','(-inf-445.9)',3,0
+'Sci-Fi Comedy','(-inf-96.6)','Warner Bros.','PG-13','(2233.5-2680.4)',8,0
+'Family Comedy','(-inf-96.6)','Universal','PG','(2233.5-2680.4)',6,0
+'War','(123.8-inf)','Buena Vista','PG-13','(2233.5-2680.4)',4,0
+'Historical Epic','(123.8-inf)','Warner Bros.','R','(2233.5-2680.4)',11,0
+'Sports Drama','(123.8-inf)','Sony / Columbia','R','(2233.5-2680.4)',12,0
+'Comedy / Drama','(96.6-110.2)','Sony / Columbia','PG-13','(2680.4-3127.3)',5,0
+'Family Adventure','(110.2-123.8)','Buena Vista','PG','(2680.4-3127.3)',6,0
+'Horror Thriller','(96.6-110.2)','New Line','R','(1786.6-2233.5)',8,0
+'Action','(-inf-96.6)','Warner Bros.','R','(2680.4-3127.3)',9,0
+'Sci-Fi Adventure','(110.2-123.8)','Warner Bros.','PG-13','(3127.3-3574.2)',5,0
+'Action','(123.8-inf)','Universal','PG-13','(3574.2-inf)',5,0
+'Period Drama','(123.8-inf)','Buena Vista','R','(1339.7-1786.6)',10,0
+'Thriller','(123.8-inf)','Universal','R','(2233.5-2680.4)',1,0
+'Comedy','(123.8-inf)','Warner Bros.','R','(1339.7-1786.6)',12,0
+'Action / Adventure','(96.6-110.2)','Warner Bros.','PG-13','(2680.4-3127.3)',7,0
+'Action Comedy','(96.6-110.2)','Warner Bros.','R','(2233.5-2680.4)',9,0
+'Sci-Fi Fantasy','(110.2-123.8)','Universal','PG-13','(2680.4-3127.3)',6,0
+'Action','(110.2-123.8)','Lionsgate','R','(2680.4-3127.3)',8,0
+'Crime Drama','(123.8-inf)','Orion Pictures','R','(445.9-892.8)',12,0
+'Sci-Fi Action','(110.2-123.8)','Universal','PG-13','(3574.2-inf)',7,0
+'Period Adventure','(110.2-123.8)','MGM','PG-13','(1339.7-1786.6)',12,0
+'Family Comedy','(-inf-96.6)','Fox','PG-13','(2680.4-3127.3)',6,0
+'Sports Drama','(110.2-123.8)','Warner Bros.','PG-13','(2680.4-3127.3)',4,0
+'Family Comedy','(-inf-96.6)','Universal','PG','(1786.6-2233.5)',8,0
+'Sci-Fi','(110.2-123.8)','Lionsgate / Summit','PG-13','(3127.3-3574.2)',11,0
+'Fantasy Comedy','(-inf-96.6)','Universal','PG','(3574.2-inf)',6,0
+'Historical Epic','(123.8-inf)','Paramount','NR','(-inf-445.9)',3,0
+'Action / Adventure','(96.6-110.2)','Fox','PG-13','(3574.2-inf)',8,0
+'Comedy','(96.6-110.2)','Warner Bros.','PG-13','(2233.5-2680.4)',5,0
+'Animation','(96.6-110.2)','Sony / Columbia','PG-13','(2233.5-2680.4)',7,0
+'Thriller','(96.6-110.2)','Buena Vista','PG-13','(3127.3-3574.2)',1,0
+'Crime Comedy','(123.8-inf)','Sony (Revolution)','R','(1786.6-2233.5)',8,0
+'War','(123.8-inf)','Warner Bros.','PG-13','(1339.7-1786.6)',2,0
+'Animation','(96.6-110.2)','Buena Vista','PG','(3574.2-inf)',11,0
+'War','(123.8-inf)','Miramax','R','(892.8-1339.7)',8,0
+'Action / Adventure','(96.6-110.2)','Warner Bros.','PG-13','(3574.2-inf)',6,0
+'Animation','(96.6-110.2)','Warner Bros.','PG','(3574.2-inf)',11,0
+'Action / Crime','(96.6-110.2)','Paramount','R','(1786.6-2233.5)',1,0
+'War Drama','(123.8-inf)','MGM','R','(2233.5-2680.4)',2,0
+'Western','(123.8-inf)','United Artists','R','(-inf-445.9)',11,0
+'Comedy','(123.8-inf)','Fox','G','(-inf-445.9)',12,0
+'Comedy','(96.6-110.2)','Universal','PG','(445.9-892.8)',8,0
+'Comedy / Drama','(110.2-123.8)','Sony / Columbia','PG-13','(2233.5-2680.4)',12,0
+'Action Comedy','(-inf-96.6)','TriStar','R','(1786.6-2233.5)',5,0
+'Family Adventure','(123.8-inf)','Paramount','PG','(2233.5-2680.4)',11,0
+'Unknown','(123.8-inf)','MGM','PG','(892.8-1339.7)',9,0
+'Drama Thriller','(123.8-inf)','Buena Vista','R','(1786.6-2233.5)',6,0
+'Sci-Fi Thriller','(-inf-96.6)','Warner Bros.','PG-13','(2680.4-3127.3)',8,0
+'Comedy','(96.6-110.2)','Columbia','PG-13','(892.8-1339.7)',5,0
+'Family','(96.6-110.2)','Warner Bros.','PG','(1786.6-2233.5)',12,0
+'Adventure','(110.2-123.8)','Warner Bros.','PG-13','(3127.3-3574.2)',3,0
+'Sci-Fi Adventure','(123.8-inf)','Buena Vista','PG-13','(3574.2-inf)',3,0
+'Sci-Fi','(123.8-inf)','Warner Bros.','PG-13','(3127.3-3574.2)',2,0
+'Action Thriller','(123.8-inf)','Paramount','PG-13','(2680.4-3127.3)',7,0
+'Fantasy','(110.2-123.8)','Columbia','PG','(892.8-1339.7)',7,0
+'Adventure Comedy','(-inf-96.6)','Universal','PG-13','(3127.3-3574.2)',6,0
+'Action Drama','(123.8-inf)','DreamWorks','R','(2233.5-2680.4)',10,0
+'Animation','(-inf-96.6)','Clarius Entertainment','PG','(2233.5-2680.4)',5,0
+'Drama','(123.8-inf)','Samuel Goldwyn','R','(-inf-445.9)',7,0
+'Western','(123.8-inf)','Buena Vista','PG-13','(3574.2-inf)',7,0
+'Drama','(123.8-inf)','Paramount','PG-13','(2233.5-2680.4)',12,0
+'Drama','(123.8-inf)','Warner Bros.','PG-13','(2233.5-2680.4)',5,0
+'Action','(110.2-123.8)','Warner Bros.','PG-13','(3574.2-inf)',8,0
+'Animation','(-inf-96.6)','Buena Vista','PG','(2680.4-3127.3)',3,0
+'Fantasy Comedy','(-inf-96.6)','Fox','PG-13','(1339.7-1786.6)',2,0
+'Animation','(-inf-96.6)','Fox','PG','(3574.2-inf)',3,0
+'Drama','(96.6-110.2)','Weinstein Company','PG-13','(1339.7-1786.6)',12,0
+'Comedy','(-inf-96.6)','Warner Bros.','PG-13','(1339.7-1786.6)',2,0
+'Fantasy','(96.6-110.2)','Freestyle Releasing','PG','(-inf-445.9)',11,0
+'Unknown','(96.6-110.2)','Columbia','R','(-inf-445.9)',2,0
+'Family Comedy','(-inf-96.6)','Warner Bros.','PG','(2233.5-2680.4)',8,0
+'Fantasy','(110.2-123.8)','Warner Bros.','PG','(3127.3-3574.2)',10,0
+'Family Adventure','(110.2-123.8)','Universal','PG','(2680.4-3127.3)',12,0
+'Action Comedy','(96.6-110.2)','Sony','PG-13','(3574.2-inf)',7,1
+'Action Drama','(96.6-110.2)','Warner Bros.','PG-13','(3127.3-3574.2)',5,0
+'Sci-Fi Adventure','(123.8-inf)','Warner Bros.','R','(1786.6-2233.5)',12,0
+'Action Adventure','(-inf-96.6)','Universal','PG-13','(2680.4-3127.3)',7,0
+'Sci-Fi Adventure','(96.6-110.2)','Warner Bros.','PG-13','(2680.4-3127.3)',11,0
+'Unknown','(123.8-inf)','Warner Bros.','PG','(-inf-445.9)',12,0
+'Animation','(96.6-110.2)','Paramount','PG','(3574.2-inf)',11,1
+'Sports Action','(96.6-110.2)','MGM','PG-13','(2680.4-3127.3)',2,0
+'Action Comedy','(-inf-96.6)','New Line','PG-13','(3574.2-inf)',8,0
+'Adventure','(123.8-inf)','Paramount','PG-13','(3127.3-3574.2)',4,0
+'Drama','(123.8-inf)','Buena Vista','R','(1339.7-1786.6)',10,0
+'Fantasy','(96.6-110.2)','Universal','PG-13','(2680.4-3127.3)',2,0
+'Sci-Fi Action','(96.6-110.2)','Warner Bros.','R','(2233.5-2680.4)',10,0
+'Sci-Fi Horror','(96.6-110.2)','Warner Bros.','PG-13','(445.9-892.8)',9,0
+'Action','(123.8-inf)','Warner Bros.','PG','(3574.2-inf)',5,0
+'Sci-Fi Thriller','(123.8-inf)','Warner Bros.','PG-13','(2680.4-3127.3)',2,0
+'Action','(110.2-123.8)','Sony','PG-13','(3127.3-3574.2)',7,0
+'Sci-Fi Thriller','(-inf-96.6)','MGM','PG-13','(2233.5-2680.4)',1,0
+'Animation','(-inf-96.6)','Fox','PG','(2680.4-3127.3)',6,0
+'Sci-Fi','(123.8-inf)','Buena Vista','PG','(3574.2-inf)',5,0
+'Romantic Comedy','(96.6-110.2)','New Line','R','(1786.6-2233.5)',4,0
+'Animation','(-inf-96.6)','Buena Vista','PG','(3127.3-3574.2)',11,0
+'War','(123.8-inf)','MGM','R','(2680.4-3127.3)',6,0
+'Horror','(96.6-110.2)','Universal','R','(3127.3-3574.2)',2,0
+'Action Thriller','(-inf-96.6)','Sony','PG-13','(3127.3-3574.2)',4,0
+'Family Adventure','(-inf-96.6)','Sony','PG','(2233.5-2680.4)',8,0

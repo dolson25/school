@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_45" class="java.beans.XMLDecoder">
+ <object class="client.notVisible.BatchState" id="BatchState0">
+  <void property="batchInfo">
+   <object class="shared.communication.DownloadBatchOutput">
+    <void property="batch_id">
+     <int>2</int>
+    </void>
+    <void property="fields">
+     <object class="java.util.ArrayList">
+      <void method="add">
+       <object class="shared.model.Field">
+        <void property="XCoordinate">
+         <int>60</int>
+        </void>
+        <void property="columnNumber">
+         <int>1</int>
+        </void>
+        <void property="fieldHelpPath">
+         <string>http://localhost:8080/Records/fieldhelp/last_name.html</string>
+        </void>
+        <void property="id">
+         <int>1</int>
+        </void>
+        <void property="knownDataPath">
+         <string>http://localhost:8080/Records/knowndata/1890_last_names.txt</string>
+        </void>
+        <void property="project_id">
+         <int>1</int>
+        </void>
+        <void property="title">
+         <string>Last Name</string>
+        </void>
+        <void property="width">
+         <int>300</int>
+        </void>
+       </object>
+      </void>
+      <void method="add">
+       <object class="shared.model.Field">
+        <void property="XCoordinate">
+         <int>360</int>
+        </void>
+        <void property="columnNumber">
+         <int>2</int>
+        </void>
+        <void property="fieldHelpPath">
+         <string>http://localhost:8080/Records/fieldhelp/first_name.html</string>
+        </void>
+        <void property="id">
+         <int>2</int>
+        </void>
+        <void property="knownDataPath">
+         <string>http://localhost:8080/Records/knowndata/1890_first_names.txt</string>
+        </void>
+        <void property="project_id">
+         <int>1</int>
+        </void>
+        <void property="title">
+         <string>First Name</string>
+        </void>
+        <void property="width">
+         <int>280</int>
+        </void>
+       </object>
+      </void>
+      <void method="add">
+       <object class="shared.model.Field">
+        <void property="XCoordinate">
+         <int>640</int>
+        </void>
+        <void property="columnNumber">
+         <int>3</int>
+        </void>
+        <void property="fieldHelpPath">
+         <string>http://localhost:8080/Records/fieldhelp/gender.html</string>
+        </void>
+        <void property="id">
+         <int>3</int>
+        </void>
+        <void property="knownDataPath">
+         <string>http://localhost:8080/Records/knowndata/genders.txt</string>
+        </void>
+        <void property="project_id">
+         <int>1</int>
+        </void>
+        <void property="title">
+         <string>Gender</string>
+        </void>
+        <void property="width">
+         <int>205</int>
+        </void>
+       </object>
+      </void>
+      <void method="add">
+       <object class="shared.model.Field">
+        <void property="XCoordinate">
+         <int>845</int>
+        </void>
+        <void property="columnNumber">
+         <int>4</int>
+        </void>
+        <void property="fieldHelpPath">
+         <string>http://localhost:8080/Records/fieldhelp/age.html</string>
+        </void>
+        <void property="id">
+         <int>4</int>
+        </void>
+        <void property="knownDataPath">
+         <string></string>
+        </void>
+        <void property="project_id">
+         <int>1</int>
+        </void>
+        <void property="title">
+         <string>Age</string>
+        </void>
+        <void property="width">
+         <int>120</int>
+        </void>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="firstYCoordinate">
+     <int>199</int>
+    </void>
+    <void property="imageURL">
+     <string>http://localhost:8080/Records/images/1890_image1.png</string>
+    </void>
+    <void property="numFields">
+     <int>4</int>
+    </void>
+    <void property="numRecords">
+     <int>8</int>
+    </void>
+    <void property="project_id">
+     <int>1</int>
+    </void>
+    <void property="recordHeight">
+     <int>60</int>
+    </void>
+    <void property="validated">
+     <boolean>true</boolean>
+    </void>
+   </object>
+  </void>
+  <void property="cellSelectedColumn">
+   <int>1</int>
+  </void>
+  <void property="cellSelectedRow">
+   <int>4</int>
+  </void>
+  <void property="highlights">
+   <boolean>false</boolean>
+  </void>
+  <void property="imageInverted">
+   <boolean>true</boolean>
+  </void>
+  <void property="password">
+   <string>parker</string>
+  </void>
+  <void property="projects">
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <object class="java.util.ArrayList">
+      <void method="add">
+       <string>1</string>
+      </void>
+      <void method="add">
+       <string>1890 Census: The Dawning of a new Age</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="java.util.ArrayList">
+      <void method="add">
+       <string>2</string>
+      </void>
+      <void method="add">
+       <string>1900 Census</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="java.util.ArrayList">
+      <void method="add">
+       <string>3</string>
+      </void>
+      <void method="add">
+       <string>Draft Records</string>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void property="spellBools">
+   <array class="[Z" length="8">
+    <void index="0">
+     <array class="boolean" length="4">
+      <void index="0">
+       <boolean>true</boolean>
+      </void>
+      <void index="3">
+       <boolean>true</boolean>
+      </void>
+     </array>
+    </void>
+    <void index="1">
+     <array class="boolean" length="4">
+      <void index="0">
+       <boolean>true</boolean>
+      </void>
+      <void index="1">
+       <boolean>true</boolean>
+      </void>
+      <void index="2">
+       <boolean>true</boolean>
+      </void>
+      <void index="3">
+       <boolean>true</boolean>
+      </void>
+     </array>
+    </void>
+    <void index="2">
+     <array class="boolean" length="4">
+      <void index="0">
+       <boolean>true</boolean>
+      </void>
+      <void index="1">
+       <boolean>true</boolean>
+      </void>
+      <void index="2">
+       <boolean>true</boolean>
+      </void>
+      <void index="3">
+       <boolean>true</boolean>
+      </void>
+     </array>
+    </void>
+    <void index="3">
+     <array class="boolean" length="4">
+      <void index="0">
+       <boolean>true</boolean>
+      </void>
+      <void index="1">
+       <boolean>true</boolean>
+      </void>
+      <void index="2">
+       <boolean>true</boolean>
+      </void>
+      <void index="3">
+       <boolean>true</boolean>
+      </void>
+     </array>
+    </void>
+    <void index="4">
+     <array class="boolean" length="4">
+      <void index="0">
+       <boolean>true</boolean>
+      </void>
+      <void index="1">
+       <boolean>true</boolean>
+      </void>
+      <void index="2">
+       <boolean>true</boolean>
+      </void>
+      <void index="3">
+       <boolean>true</boolean>
+      </void>
+     </array>
+    </void>
+    <void index="5">
+     <array class="boolean" length="4">
+      <void index="0">
+       <boolean>true</boolean>
+      </void>
+      <void index="1">
+       <boolean>true</boolean>
+      </void>
+      <void index="2">
+       <boolean>true</boolean>
+      </void>
+      <void index="3">
+       <boolean>true</boolean>
+      </void>
+     </array>
+    </void>
+    <void index="6">
+     <array class="boolean" length="4">
+      <void index="0">
+       <boolean>true</boolean>
+      </void>
+      <void index="1">
+       <boolean>true</boolean>
+      </void>
+      <void index="2">
+       <boolean>true</boolean>
+      </void>
+      <void index="3">
+       <boolean>true</boolean>
+      </void>
+     </array>
+    </void>
+    <void index="7">
+     <array class="boolean" length="4">
+      <void index="0">
+       <boolean>true</boolean>
+      </void>
+      <void index="1">
+       <boolean>true</boolean>
+      </void>
+      <void index="2">
+       <boolean>true</boolean>
+      </void>
+      <void index="3">
+       <boolean>true</boolean>
+      </void>
+     </array>
+    </void>
+   </array>
+  </void>
+  <void property="userName">
+   <string>sheila</string>
+  </void>
+  <void property="words">
+   <void method="add">
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+     <void method="add">
+      <object class="java.util.TreeSet"/>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="zoomLevel">
+   <double>0.533935546875</double>
+  </void>
+ </object>
+</java>
